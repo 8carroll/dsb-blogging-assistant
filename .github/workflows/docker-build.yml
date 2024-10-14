@@ -19,10 +19,10 @@ jobs:
         aws-region: ca-central-1
 
     - name: Login to Amazon ECR
-      run: aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 976556613810.dkr.ecr.ca-central-1.amazonaws.com
+      run: aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 387974667323.dkr.ecr.ca-central-1.amazonaws.com
 
     - name: Build Docker image
-      run: docker build -t 976556613810.dkr.ecr.ca-central-1.amazonaws.com/dsb-blogging-assistant-lambda-image:latest -f Dockerfile_Core .
+      run: docker build -t 387974667323.dkr.ecr.ca-central-1.amazonaws.com/dsb-blogging-assistant-lambda-image:latest -f Dockerfile_Core .
   build_poller_image:
     runs-on: ubuntu-latest
 
@@ -38,10 +38,10 @@ jobs:
         aws-region: ca-central-1
 
     - name: Login to Amazon ECR
-      run: aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 976556613810.dkr.ecr.ca-central-1.amazonaws.com
+      run: aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 387974667323.dkr.ecr.ca-central-1.amazonaws.com
 
     - name: Build Docker image
-      run: docker build -t 976556613810.dkr.ecr.ca-central-1.amazonaws.com/dsb-blogging-assistant-poller-image:latest -f Dockerfile_Poller .
+      run: docker build -t 387974667323.dkr.ecr.ca-central-1.amazonaws.com/dsb-blogging-assistant-poller-image:latest -f Dockerfile_Poller .
   build_sub_lambda_image:
     runs-on: ubuntu-latest
   
@@ -57,10 +57,10 @@ jobs:
           aws-region: ca-central-1
   
       - name: Login to Amazon ECR
-        run: aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 976556613810.dkr.ecr.ca-central-1.amazonaws.com
+        run: aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 387974667323.dkr.ecr.ca-central-1.amazonaws.com
   
       - name: Build Docker image
-        run: docker build -t 976556613810.dkr.ecr.ca-central-1.amazonaws.com/dsb-blogging-assistant-sub-lambda-image:latest -f Dockerfile_Subscriber .
+        run: docker build -t 387974667323.dkr.ecr.ca-central-1.amazonaws.com/dsb-blogging-assistant-sub-lambda-image:latest -f Dockerfile_Subscriber .
   build_dcm_processor_lambda_image:
         runs-on: ubuntu-latest
       
@@ -76,7 +76,7 @@ jobs:
               aws-region: ca-central-1
       
           - name: Login to Amazon ECR
-            run: aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 976556613810.dkr.ecr.ca-central-1.amazonaws.com
+            run: aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 387974667323.dkr.ecr.ca-central-1.amazonaws.com
       
           - name: Build Docker image
-            run: docker build -t 976556613810.dkr.ecr.ca-central-1.amazonaws.com/dsb-blogging-assistant-dcm-processor-lambda-image:latest -f Dockerfile_DcmProcessor .
+            run: docker build -t 387974667323.dkr.ecr.ca-central-1.amazonaws.com/dsb-blogging-assistant-dcm-processor-lambda-image:latest -f Dockerfile_DcmProcessor .
