@@ -88,7 +88,7 @@ resource "aws_lambda_function" "sub_lambda_func" {
     variables = {
       CLUSTER_NAME      = "${aws_ecs_cluster.default_ecs_cluster.name}"
       CALLBACK_TASK_ARN = "${aws_ecs_task_definition.poller_task.arn}"
-      TOPIC_URL         = "https://www.youtube.com/xml/feeds/videos.xml?channel_id=UCOSYuY_e_r5GtVdlCVwY83Q"
+      TOPIC_URL         = "https://www.youtube.com/xml/feeds/videos.xml?channel_id=UCZtelX2yGw6NVu7-imd6zHw"
     }
   }
   depends_on = [aws_ecr_repository.sub_lambda_image, aws_ecs_task_definition.poller_task]
