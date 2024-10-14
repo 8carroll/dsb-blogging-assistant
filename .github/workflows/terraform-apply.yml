@@ -4,7 +4,7 @@ on:
   workflow_call:
 
 env:
-  TF_CLOUD_ORGANIZATION: "DSB"
+  TF_CLOUD_ORGANIZATION: "TutorialOrgBcrrll"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
   TF_WORKSPACE: "dsb-blogging-assistant"
   CONFIG_DIRECTORY: "./"
