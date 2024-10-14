@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "DSB"
+    organization = "TutorialOrgBcrrll"
 
     workspaces {
       name = "dsb-blogging-assistant"
