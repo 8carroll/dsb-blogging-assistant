@@ -10,7 +10,7 @@ resource "aws_sns_topic" "default" {
 resource "aws_sns_topic_subscription" "email_subscription" {
   topic_arn = aws_sns_topic.default.arn
   protocol  = "email"
-  endpoint  = "damien@thedevsecblueprint.com"
+  endpoint  = "brandon.carroll@globalconfig.net"
 }
 
 # ECR Repository
