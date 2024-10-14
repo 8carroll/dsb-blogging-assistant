@@ -96,8 +96,8 @@ resource "aws_lambda_function" "core_lambda_func" {
   environment {
     variables = {
       SNS_TOPIC_ARN        = aws_sns_topic.default.arn
-      REPOSITORY_URL       = "https://github.com/The-DevSec-Blueprint/dsb-digest"
-      YOUTUBE_CHANNEL_NAME = "Damien Burks | The DevSec Blueprint (DSB)"
+      REPOSITORY_URL       = "https://github.com/8carroll/Securing-the-Cloud-with-Brandon-Carroll"
+      YOUTUBE_CHANNEL_NAME = "Securing the Cloud with Brandon Carroll"
     }
   }
   depends_on = [aws_ecr_repository.core_lambda_image]
